@@ -1,0 +1,12 @@
+numpy
+pandas==1.2.5
+matplotlib
+joblib
+shap
+
+streamlit==0.83.0
+
+imbalanced-learn
+lightgbm==3.2.1
+scikit-learn
+cffi==1.14.5
