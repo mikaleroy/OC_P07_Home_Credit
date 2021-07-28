@@ -31,7 +31,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 # Chargement des données
 @st.cache(allow_output_mutation=True)
 def load_datas():
-    return  joblib.load('features'), joblib.load('df_client'), joblib.load('Neighbors'), joblib.load('model')
+    return  joblib.load('APP/features'), joblib.load('df_client'), joblib.load('Neighbors'), joblib.load('model')
 
 
 # Predictions probabilities
