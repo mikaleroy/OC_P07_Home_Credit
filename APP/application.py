@@ -50,9 +50,9 @@ def predict_classes():
     return p_c
 
 # Function to explain by shap (does not handle votingclassifer natively)
-@st.cache
-def f(X):
-    return model.predict_proba(X)[:,1]
+# @st.cache
+# def f(X):
+#     return model.predict_proba(X)[:,1]
 
 # Gauge for accept/ reject descision display
 def gauge(labels=['LOW','HIGH'], colors='jet_r', arrow=1, title=''): 
@@ -215,7 +215,10 @@ if __name__ == "__main__":
     threshold=.5
     
     # Create an explainer
-    explainer = shap.Explainer(f,feat,link=shap.links.logit)
+    explainer = shap.TreeExplainer(model_fitted[-1],
+                                   model_fitted[:-1].transform(feat),
+                                   link=shap.links.logit
+                                  )
     
     # Dashboard
     st.title('Home Credit')
