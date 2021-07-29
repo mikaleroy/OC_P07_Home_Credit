@@ -49,10 +49,6 @@ def predict_classes():
     p_c.name = 'class'
     return p_c
 
-# Function to explain by shap (does not handle votingclassifer natively)
-# @st.cache
-# def f(X):
-#     return model.predict_proba(X)[:,1]
 
 # Gauge for accept/ reject descision display
 def gauge(labels=['LOW','HIGH'], colors='jet_r', arrow=1, title=''): 
