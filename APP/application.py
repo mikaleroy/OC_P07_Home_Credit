@@ -211,8 +211,8 @@ if __name__ == "__main__":
     threshold=.5
     
     # Create an explainer
-    explainer = shap.TreeExplainer(model_fitted[-1],
-                                   model_fitted[:-1].transform(feat),
+    explainer = shap.TreeExplainer(model[-1],
+                                   model[:-1].transform(feat),
                                    link=shap.links.logit
                                   )
     
