@@ -8,5 +8,5 @@ streamlit==0.83.0
 
 imbalanced-learn
 lightgbm==3.2.1
-scikit-learn
+scikit-learn==0.20.1
 cffi==1.14.6
